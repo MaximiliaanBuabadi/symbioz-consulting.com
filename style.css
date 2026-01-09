@@ -7,13 +7,9 @@
 
 /* Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -22,22 +18,18 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0.75rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(255,255,255,0.95);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     z-index: 1000;
-}
-
-.nav-logo img {
-    height: 42px;
 }
 
 .nav-links a {
@@ -50,44 +42,29 @@ body {
 /* Hero */
 #hero {
     min-height: 100vh;
-    padding: 6rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
     text-align: center;
+    padding: 6rem 1rem 2rem;
+    gap: 1.5rem;
 }
 
 .hero-logo {
-    height: 70px;
+    height: 200px;       /* Groot logo */
+    width: auto;
+    margin-bottom: 1rem;
 }
 
 .hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     color: var(--primary);
 }
 
 .hero-content p {
     font-size: 1.25rem;
     color: var(--text-light);
-}
-
-.hero-image img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-    #hero {
-        flex-direction: row;
-        text-align: left;
-    }
-    .hero-content,
-    .hero-image {
-        flex: 1;
-    }
 }
 
 /* Sections */
@@ -111,7 +88,7 @@ section p {
     margin-top: 0.5rem;
 }
 
-/* Approach list */
+/* Approach List */
 .approach-list {
     list-style: none;
     display: grid;
@@ -122,6 +99,7 @@ section p {
 #cta {
     text-align: center;
     background: #f9fafb;
+    padding: 4rem 1rem;
 }
 
 /* Buttons */
@@ -161,4 +139,13 @@ footer {
     text-align: center;
     background: #f3f4f6;
     font-size: 0.85rem;
+}
+
+/* Responsive Hero */
+@media (min-width: 768px) {
+    #hero {
+        flex-direction: row;
+        text-align: left;
+        gap: 3rem;
+    }
 }
